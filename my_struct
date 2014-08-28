@@ -3,23 +3,23 @@
 
 typedef struct packed { 
 logic [15:0] data; 
-logic [3:0] adr; 
-logic ena;
+logic [3:0]  adr; 
+logic        ena;
 } signal_alu_wr_reg;
 
 
 typedef struct packed { 
 logic [15:0] data; 
-logic [3:0] adr; 
-logic ena;
+logic [3:0]  adr; 
+logic        ena;
 } signal_mem_wr_reg;
 
 
 
 typedef struct packed { 
 logic [15:0] data; 
-logic [3:0] adr; 
-logic ena;
+logic [3:0]  adr; 
+logic        ena;
 } signal_wr_reg;
 
 typedef struct packed { 
@@ -31,41 +31,65 @@ logic [15:0] b;
 typedef struct packed { 
 logic [3:0] a1;
 logic [3:0] a2;
-logic ena;
+logic       ena;
 } signal_adr_regt;
 
 typedef struct packed { 
 logic [4:0] adr_m;
 logic [3:0] adr_r;
-logic ena;
+logic       ena;
 } signal_in1;
 
 
 typedef struct packed { 
 logic [3:0] adr;
-logic ena;
+logic       ena;
 } signal_reg_wr_mem;
 
 typedef struct packed { 
 logic [3:0] adr_rm;
-logic ena;
+logic       ena;
 } signal_offset_id_reg;
 
 typedef struct packed { 
 logic [4:0] adr;
-logic ena;
+logic       ena;
 } signal_offset_reg_mem;
 
 typedef struct packed { 
 logic [4:0] adr;
-logic ena;
+logic       ena;
 } signal_off_wr_mem;
 
 
 typedef struct packed { 
 logic [4:0] adr;
-logic ena;
+logic       ena;
 } signal_off_mem;
+
+
+typedef struct packed { 
+logic ravno;
+logic bolshe;
+logic menshe;
+logic rav_adr;
+} signal_flag_alu;
+
+typedef struct packed { 
+logic ravno;
+logic bolshe;
+logic menshe;
+logic rav_adr;
+} signal_flag_ena_id;
+
+typedef struct packed { 
+logic ravno;
+logic bolshe;
+logic menshe;
+logic rav_adr;
+logic ena;
+logic ena_ra;
+} signal_flag_wr_alu;
 
 
 `endif 
